@@ -7,11 +7,13 @@ import tp3.ejercicio1.GeneralTree;
 
 public class AnalizadorArbol {
 	public double devolverMaximoPromedio (GeneralTree<AreaEmpresa>arbol) {
-		/*Selecciono el recorrido por niveles ya que es mas adecuado para
+		/**
+		 Selecciono el recorrido por niveles ya que es mas adecuado para
 		 * este problema, lo que hago aca es: Creo 3 variables para calcular
 		 * los promedios, una para cada lvl y otra que sera la que retorne
 		 * Y con una cola, voy encolando los nodos de cada nivel  y contavilizo,
-		 * asi hasta terminar de recorrer el arbol y quedarme con el maximo promedio*/
+		 * asi hasta terminar de recorrer el arbol y quedarme con el maximo promedio
+		 */
 		double prom = 0;
 		double promMax = 0;
 		double cant = 0;

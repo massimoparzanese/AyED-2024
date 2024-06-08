@@ -60,9 +60,9 @@ public class RecorridosAG {
 			Integer n) {
 		if(!a.isLeaf()) {
 			List<GeneralTree<Integer>> children = a.getChildren();
-			numerosImparesMayoresQueInOrden(listita,children.get(0),n);
+			numerosImparesMayoresQuePostOrden(listita,children.get(0),n);
 			for(int i=1;i<children.size();i++) {
-				numerosImparesMayoresQueInOrden(listita,children.get(i),n);
+				numerosImparesMayoresQuePostOrden(listita,children.get(i),n);
 			}
 			if(a.getData() % 2 != 0 && a.getData() > n) {
 				listita.add(a.getData());
