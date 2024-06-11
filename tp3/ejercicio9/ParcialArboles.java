@@ -14,17 +14,20 @@ public class ParcialArboles {
 	}
 	private static boolean esDeSeleccion_aux(GeneralTree<Integer> arbol) {
 		boolean ok = true;
+		int min = 99999;
 		if(!arbol.isLeaf()) {
 			List<GeneralTree<Integer>> children = arbol.getChildren();
-			Iterator<GeneralTree<Integer>> it = children.iterator();
-			while(it.hasNext() && ok) {
-			 GeneralTree<Integer> child = it.next();
-			 ok = esDeSeleccion_aux(child);
-			 if(child.getData() < arbol.getData()) {
+			for(GeneralTree<Integer> child:children) {
+				ok = esDeSeleccion_aux(child);
+				if(child.getData() < min) {
+					min = child.getData();
+				}}
+			 
+			 if(min != arbol.getData()) {
 				 ok = false;
 			 }
 			}
-		}
+		
 		return ok;
 	}
 }
