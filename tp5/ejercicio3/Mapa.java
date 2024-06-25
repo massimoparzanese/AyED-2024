@@ -46,8 +46,9 @@ public class Mapa {
 			}
 		     if(!camino.contains(ciudad2)) {
 		    	 camino.remove(camino.size()-1);
+		    	 marcados[origen.getPosition()] = false;
 		    }
-		     marcados[origen.getPosition()] = false;
+		    
 	}
 	
 	public List<String> devolverCaminoExceptuando (String ciudad1, 
@@ -88,9 +89,9 @@ public class Mapa {
 		   }
 		   if(!camino.contains(destino)) {
 		    	 camino.remove(camino.size()-1);
-		    	 
+		    	 marcados[origen.getPosition()] = false; 
 		     }
-		   marcados[origen.getPosition()] = false;
+		  
 		
 	}
 	public List<String> caminoMasCorto(String ciudad1, String ciudad2){
@@ -163,7 +164,8 @@ public class Mapa {
 		}
 		if(!camino.contains(ciudad2)) {
 			camino.remove(camino.size()-1);
+			marcados[origen.getPosition()] = false;
 		}
-		marcados[origen.getPosition()] = false;
+		
 	}
 }
