@@ -30,25 +30,28 @@ public class mainParcialTema1 {
 
     grafo.connect(v1, v2, 15);
     grafo.connect(v1, v3, 10);
-    grafo.connect(v1, v8, 25);
-    grafo.connect(v2, v1, 15);
-    grafo.connect(v2, v3, 8);
     grafo.connect(v3, v1, 10);
+    grafo.connect(v1, v8, 25);
+    grafo.connect(v8, v1, 25);
+    grafo.connect(v1, v7, 20);
+    grafo.connect(v7, v1, 20);
+    grafo.connect(v2, v1, 15);
+    grafo.connect(v1, v2, 15);
+    grafo.connect(v2, v3, 8);
     grafo.connect(v3, v2, 8);
     grafo.connect(v3, v4, 5);
     grafo.connect(v4, v3, 5);
     grafo.connect(v4, v5, 15);
+    grafo.connect(v4, v6, 15);
     grafo.connect(v5, v4, 15);
-    grafo.connect(v5, v6, 2);
-    grafo.connect(v6, v5, 2);
-    grafo.connect(v6, v7, 8);
+    grafo.connect(v6, v7, 10);
     grafo.connect(v7, v8, 20);
     grafo.connect(v8, v7, 20);
     grafo.connect(v8, v1, 25);
-    grafo.connect(v7, v6, 8);
+    grafo.connect(v7, v6, 10);
     
     ParcialGrafosTema1 par = new ParcialGrafosTema1();
-    List<recinto> listita = par.resolver(grafo, 138);
+    List<recinto> listita = par.resolver(grafo, 108);
     for(recinto re:listita) {
     	System.out.println(re.getName() + re.getTime());
     }
